@@ -155,3 +155,17 @@ footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 2re
 /* Book covers: show whole, never cropped */
 .lead.cover { aspect-ratio: auto; width: auto; max-width: min(100%, 360px); max-height: 70vh; object-fit: contain; background: none; box-shadow: 0 6px 24px rgba(0,0,0,.18); }
 @media (max-width: 760px) { .lead.cover { margin: 0 auto; width: auto; max-width: 70%; } }
+
+/* Top-level drawers: things. thoughts. info. */
+.directory .drawer { border-bottom: 1px solid var(--rule); }
+.directory .drawer > summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; padding: .8rem 0; }
+.directory .drawer > summary::-webkit-details-marker { display: none; }
+.directory .drawer > summary .t { font: 1.5rem/1.1 var(--serif); }
+.directory .drawer > summary::after { content: "+"; margin-left: auto; font-size: 1.1rem; color: var(--muted); }
+.directory .drawer[open] > summary::after { content: "–"; }
+.directory .drawer > summary:hover .t { text-decoration: underline; text-underline-offset: 4px; }
+.drawer-in { padding: 0 0 .8rem 1rem; }
+.drawer-in .cat:last-child { border-bottom: 0; }
+.directory .flat { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); column-gap: 2rem; }
+.directory .flat li a { border-bottom: 0; }
+#contact { scroll-margin-top: 3.5rem; }
