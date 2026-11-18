@@ -90,7 +90,7 @@
           });
         });
       });
-      var pad = 0.07, labelRoom = 0.1;
+      var pad = 0.07, labelRoom = 0;
       scale = Math.min(W * (1 - 2 * pad) / (r[2] - r[0]), Hh * (1 - 2 * pad - labelRoom) / (r[3] - r[1]));
       ox = W / 2 - scale * (r[0] + r[2]) / 2;
       oy = Hh * pad + (Hh * (1 - 2 * pad - labelRoom) - scale * (r[3] - r[1])) / 2 - scale * r[1];
@@ -173,13 +173,6 @@
       }
       if (S.pushY) push('y');
       if (S.pushX) push('x');
-
-      ctx.globalAlpha = a; ctx.fillStyle = INK; ctx.textAlign = 'center';
-      ctx.fillText(S.label, W / 2, Hh - Hh * 0.06);
-      ctx.textAlign = 'right'; ctx.fillStyle = GREY; ctx.globalAlpha = 1;
-      ctx.font = Math.max(9, Math.round(W / 60)) + 'px system-ui, -apple-system, sans-serif';
-      ctx.fillText('\u21bb click to replay', W - 10, Hh - 10);
-      ctx.textAlign = 'left';
 
       if (running && !still && forced === null) requestAnimationFrame(frame);
     }
