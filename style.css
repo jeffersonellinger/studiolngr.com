@@ -177,3 +177,7 @@ h1.logo a { display: block; }
 
 /* Diagrams: whole image, never cropped */
 .gallery img.whole { object-fit: contain; background: #fff; }
+
+/* Live diagrams */
+.gallery canvas.anim { width: 100%; aspect-ratio: 4 / 3; background: #fff; display: block; }
+@media (max-width: 760px) { .gallery canvas.anim { flex: 0 0 86%; scroll-snap-align: center; } }
