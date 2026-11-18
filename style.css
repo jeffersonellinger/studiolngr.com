@@ -174,3 +174,6 @@ footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 2re
 h1.logo { margin: 0; font: inherit; display: flex; flex-direction: column; align-items: center; }
 h1.logo a { display: block; }
 .who { display: block; margin-top: .9rem; font: 500 .78rem var(--sans); letter-spacing: .14em; text-transform: uppercase; }
+
+/* Diagrams: whole image, never cropped */
+.gallery img.whole { object-fit: contain; background: #fff; }
